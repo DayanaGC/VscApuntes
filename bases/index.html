@@ -11,15 +11,16 @@
 <body>
 
     <div id ="myApp">
-        <h1>Batman</h1>
-        
-        <ul>   
-            <li v-for="quote in quotes" > author </li>
-            
+      <h1>{{ quote}}</h1>
+      <blockquote> -{{ author}} </blockquote>
+    
 
-            
-        </ul>
-    </div>
+
+    <button v-on:click="changeQueote">
+        change quote 
+    </button>
+
+</div>
 
     <script src="app.js"></script>
 
