@@ -1,6 +1,6 @@
 <template>
-    <h2>Counter!!</h2> 
-    <p> {{ counter}} <sup>2</sup> = {{ squareCounter}}</p>
+    <h2>{{ customTitle}}</h2> 
+    <p> {{ counter}}<sup>2</sup> = {{ squareCounter}}</p>
 
     <div>
 
@@ -13,10 +13,22 @@
 
 <script>
 export default {
+    props: {
+        title: String,
+        start: {
+            type: Number,
+            default: 100,
+            //required: true
+            validator(value) {
+                return value >=0
+            }
+        }
+
+     },
     //name: "patito"
     data() {
         return {
-            counter: 5
+            counter: this.start
         }
     },
     methods: {
@@ -32,7 +44,12 @@ export default {
     },
     computed: {
         squareCounter() {
-        return this.counter * this.counter
+            return this.counter * this.counter
+        },
+        customTitle() {
+            return this.title || 'Counter'
+            
+        
         }
     }
 }
