@@ -11,7 +11,7 @@
         <p>Recuerda terminar con un signo de interrogacion (?)</p>
         <div>
             <h2>{{ question }}</h2>
-            <h1>{{ answer }}</h1>
+            <h1>{{ answer === 'yes' ? 'Si!' : 'No!'}}</h1>
         </div>
 
     </div>
