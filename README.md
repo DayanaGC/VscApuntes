@@ -1,4 +1,4 @@
-# 03-fundamentos
+# 04-pokemon-game
 
 ## Project setup
 ```
