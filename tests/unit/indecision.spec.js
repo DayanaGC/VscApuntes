@@ -13,9 +13,6 @@ describe('Indecision Component', () => {
             answer: 'yes',
             forced: false,
             image: 'https://yesno.wtf/assets/yes/2.gif'
-            // "answer": "no",
-            // "forced": false,
-            // "image": "https://yesno.wtf/assets/yes/2.gif"
         })
     }))  
 
@@ -68,15 +65,12 @@ describe('Indecision Component', () => {
 
         const img = wrapper.find('img')
 
-        // expect( img.exists() ).toBeTruthy()
-        // expect( wrapper.vm.img ).toBe('https://yesno.wtf/assets/no/2.gif')
-        // expect( wrapper.vm.answer ).toBe('No!')
     })
 
     test('pruebas en getAnswer - fallo en el API', async () => {
 
         
-        fetch.mockImplementationOnce( () => Promise.reject('API is down :C'))
+        fetch.mockImplementationOnce( () => Promise.reject('API is down'))
 
         await wrapper.vm.getAnswer()
 
