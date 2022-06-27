@@ -41,7 +41,7 @@ export default {
     height: 200px;
     display: flex;
     justify-content: center;
-}
+} 
 img {
     height: 200px;
     position: absolute;
