@@ -1,18 +1,19 @@
 <template>
-  <PokemonPage />
+  <Navbar />
+  <img alt="Vue logo" src="./assets/logo.png">
+  <router-view />
 </template>
 
-
 <script>
-import PokemonPage from './pages/PokemonPage.vue'
-
+import { defineAsyncComponent } from 'vue'
 export default {
   name: 'App',
   components: {
-    PokemonPage
+    Navbar: defineAsyncComponent (() => import (/*wekpackChunkName: "Navbar"*/'./modules/shared/components/Navbar'))
   }
 }
 </script>
+
 
 <style>
 #app {
@@ -22,5 +23,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body {
+  display: flex;
+  justify-content: center;
 }
 </style>
